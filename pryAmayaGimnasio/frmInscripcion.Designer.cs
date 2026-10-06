@@ -46,6 +46,10 @@
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.chkCasillero = new System.Windows.Forms.CheckBox();
+            this.grbDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.grpPlan = new System.Windows.Forms.GroupBox();
+            this.grpPago = new System.Windows.Forms.GroupBox();
+            this.grpPlan.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -187,7 +191,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(132, 259);
+            this.btnCalcular.Location = new System.Drawing.Point(213, 288);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
             this.btnCalcular.TabIndex = 19;
@@ -196,7 +200,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(132, 288);
+            this.btnLimpiar.Location = new System.Drawing.Point(294, 288);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpiar.TabIndex = 20;
@@ -206,19 +210,46 @@
             // chkCasillero
             // 
             this.chkCasillero.AutoSize = true;
-            this.chkCasillero.Location = new System.Drawing.Point(132, 317);
+            this.chkCasillero.Location = new System.Drawing.Point(206, 55);
             this.chkCasillero.Name = "chkCasillero";
             this.chkCasillero.Size = new System.Drawing.Size(131, 17);
             this.chkCasillero.TabIndex = 21;
             this.chkCasillero.Text = "Casillero ($ 3000/mes)";
             this.chkCasillero.UseVisualStyleBackColor = true;
             // 
+            // grbDatosPersonales
+            // 
+            this.grbDatosPersonales.Location = new System.Drawing.Point(32, 12);
+            this.grbDatosPersonales.Name = "grbDatosPersonales";
+            this.grbDatosPersonales.Size = new System.Drawing.Size(329, 86);
+            this.grbDatosPersonales.TabIndex = 22;
+            this.grbDatosPersonales.TabStop = false;
+            this.grbDatosPersonales.Text = "Datos Personales";
+            // 
+            // grpPlan
+            // 
+            this.grpPlan.Controls.Add(this.chkCasillero);
+            this.grpPlan.Location = new System.Drawing.Point(32, 104);
+            this.grpPlan.Name = "grpPlan";
+            this.grpPlan.Size = new System.Drawing.Size(337, 75);
+            this.grpPlan.TabIndex = 23;
+            this.grpPlan.TabStop = false;
+            this.grpPlan.Text = "Plan";
+            // 
+            // grpPago
+            // 
+            this.grpPago.Location = new System.Drawing.Point(32, 184);
+            this.grpPago.Name = "grpPago";
+            this.grpPago.Size = new System.Drawing.Size(329, 69);
+            this.grpPago.TabIndex = 24;
+            this.grpPago.TabStop = false;
+            this.grpPago.Text = "Formas de pago";
+            // 
             // frmInscripcion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.chkCasillero);
+            this.ClientSize = new System.Drawing.Size(402, 344);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.cboCuotas);
@@ -236,11 +267,16 @@
             this.Controls.Add(this.txtMeses);
             this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.grbDatosPersonales);
+            this.Controls.Add(this.grpPlan);
+            this.Controls.Add(this.grpPago);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmInscripcion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gimnasio Siglo - Inscripcion";
+            this.grpPlan.ResumeLayout(false);
+            this.grpPlan.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,6 +302,9 @@
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.CheckBox chkCasillero;
+        private System.Windows.Forms.GroupBox grbDatosPersonales;
+        private System.Windows.Forms.GroupBox grpPlan;
+        private System.Windows.Forms.GroupBox grpPago;
     }
 }
 
