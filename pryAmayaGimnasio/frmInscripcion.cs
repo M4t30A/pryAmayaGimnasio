@@ -210,5 +210,20 @@ namespace pryAmayaGimnasio
 
             btnLimpiar_Click(null, EventArgs.Empty);
         }
+
+        private void frmInscripcion_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkEstudiante_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkCasillero_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
