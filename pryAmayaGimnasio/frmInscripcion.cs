@@ -6,19 +6,16 @@ namespace pryAmayaGimnasio
 {
     public partial class frmInscripcion : Form
     {
-        // =====================================================
-        //  CONSTANTES (a nivel de la clase: las ven todos los eventos)
-        // =====================================================
-        // Precios mensuales de los planes
+       
         const decimal PRECIO_MUSCULACION = 15000m;
         const decimal PRECIO_FUNCIONAL = 18000m;
         const decimal PRECIO_NATACION = 22000m;
-        const decimal PRECIO_CASILLERO = 3000m;     // adicional por mes
+        const decimal PRECIO_CASILLERO = 3000m;    
 
         // Reglas de edad y de meses
         const int EDAD_MINIMA = 14;
-        const int EDAD_MENOR = 18;                  // menor de 18 -> descuento
-        const int EDAD_SENIOR = 65;                 // 65 o más -> descuento
+        const int EDAD_MENOR = 18;                  
+        const int EDAD_SENIOR = 65;                
         const int MESES_MINIMO = 1;
         const int MESES_MAXIMO = 12;
 
@@ -33,20 +30,18 @@ namespace pryAmayaGimnasio
         const decimal RECARGO_6_CUOTAS = 0.20m;
 
         // =====================================================
-        //  PALETA DE COLORES (solo apariencia, no interviene en los cálculos)
-        //  Color no puede ser "const", por eso se usa readonly.
+        //  PALETA DE COLORES 
         // =====================================================
-        readonly Color colorFondo = ColorTranslator.FromHtml("#0F172A");            // fondo principal
-        readonly Color colorPanel = ColorTranslator.FromHtml("#1E293B");            // paneles y contenedores
-        readonly Color colorBorde = ColorTranslator.FromHtml("#334155");            // bordes
-        readonly Color colorTexto = ColorTranslator.FromHtml("#F8FAFC");            // texto principal
-        readonly Color colorTextoSecundario = ColorTranslator.FromHtml("#94A3B8");  // texto secundario
-        readonly Color colorPrimario = ColorTranslator.FromHtml("#38BDF8");         // botones y acciones
-        readonly Color colorAcento = ColorTranslator.FromHtml("#818CF8");           // acentos (alternativa: #34D399)
+        readonly Color colorFondo = ColorTranslator.FromHtml("#0F172A");            
+        readonly Color colorPanel = ColorTranslator.FromHtml("#1E293B");          
+        readonly Color colorBorde = ColorTranslator.FromHtml("#334155");           
+        readonly Color colorTexto = ColorTranslator.FromHtml("#F8FAFC");            
+        readonly Color colorTextoSecundario = ColorTranslator.FromHtml("#94A3B8");  
+        readonly Color colorPrimario = ColorTranslator.FromHtml("#38BDF8");         
+        readonly Color colorAcento = ColorTranslator.FromHtml("#818CF8");          
 
         // =====================================================
-        //  STRUCT SOCIO: agrupa los datos del socio en una variable
-        //  (en la declaración no se asignan valores iniciales)
+        //  STRUCT SOCIO
         // =====================================================
         struct SOCIO
         {
@@ -64,12 +59,9 @@ namespace pryAmayaGimnasio
         public frmInscripcion()
         {
             InitializeComponent();
-            AplicarPaleta();                    // colores que el Diseñador no permite (ver más abajo)
+            AplicarPaleta();                   
         }
 
-        // =====================================================
-        //  COLORES POR CÓDIGO: solo lo que no se puede hacer desde Propiedades
-        // =====================================================
         private void AplicarPaleta()
         {
             // 1) Botones: el color depende de si están habilitados o no
@@ -94,18 +86,18 @@ namespace pryAmayaGimnasio
         {
             if (!b.Enabled)
             {
-                b.BackColor = colorPanel;               // deshabilitado: apagado
-                b.ForeColor = colorTextoSecundario;     // (Windows lo muestra en gris)
+                b.BackColor = colorPanel;               
+                b.ForeColor = colorTextoSecundario;     
             }
             else if (b == btnAnterior || b == btnLimpiar)
             {
-                b.BackColor = colorBorde;               // botones secundarios
+                b.BackColor = colorBorde;               
                 b.ForeColor = colorTexto;
             }
             else
             {
-                b.BackColor = colorPrimario;            // botones de acción
-                b.ForeColor = colorFondo;               // texto oscuro: mejor contraste sobre celeste
+                b.BackColor = colorPrimario;          
+                b.ForeColor = colorFondo;               
             }
         }
 
@@ -169,35 +161,34 @@ namespace pryAmayaGimnasio
         }
 
         // =====================================================
-        //  MÉTODO PROPIO: deja el formulario en su estado inicial
-        //  (se usa en Load, en Limpiar y al terminar de calcular)
+        //  MÉTODO PROPIO
         // =====================================================
         private void EstadoInicial()
         {
             txtNombre.Clear();
             txtEdad.Clear();
             chkEstudiante.Checked = false;
-            cboPlan.SelectedIndex = 0;          // Musculación
-            cboTurno.SelectedIndex = 0;         // Mañana
+            cboPlan.SelectedIndex = 0;          
+            cboTurno.SelectedIndex = 0;         
             txtMeses.Text = "1";
             chkCasillero.Checked = false;
             rbtEfectivo.Checked = true;
-            cboCuotas.SelectedIndex = -1;       // -1 = ningún elemento seleccionado
+            cboCuotas.SelectedIndex = -1;      
             cboCuotas.Enabled = false;
             btnCalcular.Enabled = false;
             lblAviso.Visible = true;
-            tabInscripcion.SelectedIndex = 0;   // vuelve a la primera pestaña
+            tabInscripcion.SelectedIndex = 0;   
             ActualizarNavegacion();
             txtNombre.Focus();
         }
 
         // =====================================================
         //  NAVEGACIÓN ENTRE PESTAÑAS
-        //  Actualiza "Anterior", "Siguiente" y el texto "Paso X de 3"
+        //  Actualiza "Anterior", "Siguiente" 
         // =====================================================
         private void ActualizarNavegacion()
         {
-            int pestana = tabInscripcion.SelectedIndex;     // 0, 1 o 2
+            int pestana = tabInscripcion.SelectedIndex;    
             bool puedeAvanzar = false;
 
             if (pestana == 0)
@@ -207,10 +198,9 @@ namespace pryAmayaGimnasio
             }
             else if (pestana == 1)
             {
-                // Para pasar a "Forma de pago" hacen falta los meses
                 puedeAvanzar = txtMeses.Text.Length > 0;
             }
-            // en la última pestaña (2) no hay "Siguiente": puedeAvanzar queda en false
+            
 
             btnAnterior.Enabled = pestana > 0;
             btnSiguiente.Enabled = puedeAvanzar;
@@ -246,9 +236,9 @@ namespace pryAmayaGimnasio
         }
 
         // =====================================================
-        //  ETAPA 5.a - FILTRAR TECLAS (evento KeyPress)
+        //  ETAPA 5.a 
         // =====================================================
-        // Nombre: si la tecla es una letra minúscula, se cambia por su mayúscula
+        
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Char.IsLower(e.KeyChar))
@@ -268,22 +258,21 @@ namespace pryAmayaGimnasio
 
         // =====================================================
         //  ETAPA 5.b - HABILITAR / DESHABILITAR "Calcular"
-        //  (TextChanged de txtNombre, txtEdad y txtMeses)
         // =====================================================
         private void ValidarDatos_TextChanged(object sender, EventArgs e)
         {
             if (txtNombre.Text.Trim().Length > 0 && txtEdad.Text.Length > 0 && txtMeses.Text.Length > 0)
             {
                 btnCalcular.Enabled = true;
-                lblAviso.Visible = false;       // ya está todo cargado: se oculta el aviso
+                lblAviso.Visible = false;     
             }
             else
             {
                 btnCalcular.Enabled = false;
-                lblAviso.Visible = true;        // falta algún dato: se muestra el aviso
+                lblAviso.Visible = true;        
             }
 
-            ActualizarNavegacion();             // también puede cambiar "Siguiente"
+            ActualizarNavegacion();             
         }
 
         // =====================================================
@@ -294,12 +283,12 @@ namespace pryAmayaGimnasio
             if (rbtTarjeta.Checked)
             {
                 cboCuotas.Enabled = true;
-                cboCuotas.SelectedIndex = 0;    // 1 cuota
+                cboCuotas.SelectedIndex = 0;   
             }
             else
             {
                 cboCuotas.Enabled = false;
-                cboCuotas.SelectedIndex = -1;   // sin selección
+                cboCuotas.SelectedIndex = -1;  
             }
         }
 
@@ -319,7 +308,7 @@ namespace pryAmayaGimnasio
             decimal porcDescuento = 0m;
             decimal descuento = 0m;
             decimal importeConDescuento = 0m;
-            decimal porcAjuste = 0m;            // pago: -10% efectivo, + recargo tarjeta
+            decimal porcAjuste = 0m;            
             decimal total = 0m;
             decimal valorCuota = 0m;
             int cuotas = 1;
@@ -328,7 +317,7 @@ namespace pryAmayaGimnasio
             // ----- Etapa 5.c: primero CONVERTIR, después VALIDAR, recién después CALCULAR -----
             if (!int.TryParse(txtEdad.Text, out edad))
             {
-                tabInscripcion.SelectedTab = tpgDatos;      // se va a la pestaña donde está el dato
+                tabInscripcion.SelectedTab = tpgDatos;     
                 MessageBox.Show("La edad debe ser un número.", "Datos inválidos",
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEdad.Focus();
@@ -353,7 +342,7 @@ namespace pryAmayaGimnasio
                 return;
             }
 
-            if (meses < MESES_MINIMO || meses > MESES_MAXIMO)   // una sola condición con ||
+            if (meses < MESES_MINIMO || meses > MESES_MAXIMO)   
             {
                 tabInscripcion.SelectedTab = tpgPlan;
                 MessageBox.Show("Los meses deben estar entre " + MESES_MINIMO + " y " + MESES_MAXIMO + ".",
@@ -411,23 +400,23 @@ namespace pryAmayaGimnasio
             // ----- Etapa 7: if anidado (los descuentos NO se acumulan) -----
             if (edad < EDAD_MENOR)
             {
-                porcDescuento = DESC_MENOR;                 // menor de 18: 25%
+                porcDescuento = DESC_MENOR;                 
             }
             else
             {
                 if (edad >= EDAD_SENIOR)
                 {
-                    porcDescuento = DESC_SENIOR;            // 65 o más: 30%
+                    porcDescuento = DESC_SENIOR;           
                 }
                 else
                 {
                     if (chkEstudiante.Checked)
                     {
-                        porcDescuento = DESC_ESTUDIANTE;    // estudiante: 15%
+                        porcDescuento = DESC_ESTUDIANTE;    
                     }
                     else
                     {
-                        porcDescuento = 0m;                 // sin descuento
+                        porcDescuento = 0m;                 
                     }
                 }
             }
@@ -439,22 +428,22 @@ namespace pryAmayaGimnasio
             // ----- Etapa 8: if - else (efectivo) y cadena if - else if (cuotas) -----
             if (rbtEfectivo.Checked)
             {
-                porcAjuste = -DESC_EFECTIVO;                // efectivo: -10%
+                porcAjuste = -DESC_EFECTIVO;                
             }
             else
             {
-                cuotas = int.Parse(cboCuotas.Text);         // cuotas elegidas, como entero
+                cuotas = int.Parse(cboCuotas.Text);        
                 if (cuotas == 1)
                 {
-                    porcAjuste = 0m;                        // 1 cuota: sin recargo
+                    porcAjuste = 0m;                        
                 }
                 else if (cuotas == 3)
                 {
-                    porcAjuste = RECARGO_3_CUOTAS;          // 3 cuotas: +10%
+                    porcAjuste = RECARGO_3_CUOTAS;          
                 }
                 else if (cuotas == 6)
                 {
-                    porcAjuste = RECARGO_6_CUOTAS;          // 6 cuotas: +20%
+                    porcAjuste = RECARGO_6_CUOTAS;         
                 }
             }
 
