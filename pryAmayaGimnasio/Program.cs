@@ -16,7 +16,7 @@ namespace pryAmayaGimnasio
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmInscripcion());
+            Application.Run(new frmBienvenida());
         }
     }
 }

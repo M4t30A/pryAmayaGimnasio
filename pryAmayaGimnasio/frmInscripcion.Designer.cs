@@ -28,346 +28,496 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtMeses = new System.Windows.Forms.TextBox();
-            this.cboPlan = new System.Windows.Forms.ComboBox();
-            this.lblPlan = new System.Windows.Forms.Label();
-            this.lblTurno = new System.Windows.Forms.Label();
-            this.lblMeses = new System.Windows.Forms.Label();
-            this.cboTurno = new System.Windows.Forms.ComboBox();
-            this.btnCalcular = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.Datos = new System.Windows.Forms.TabControl();
-            this.tbDatos = new System.Windows.Forms.TabPage();
-            this.tbPlan = new System.Windows.Forms.TabPage();
-            this.lblEstudiante = new System.Windows.Forms.Label();
-            this.chkEstudiante = new System.Windows.Forms.CheckBox();
-            this.lblEdad = new System.Windows.Forms.Label();
+            this.pnlEncabezado = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblSubtitulo = new System.Windows.Forms.Label();
+            this.tabInscripcion = new System.Windows.Forms.TabControl();
+            this.tpgDatos = new System.Windows.Forms.TabPage();
+            this.tpgPlan = new System.Windows.Forms.TabPage();
+            this.tpgPago = new System.Windows.Forms.TabPage();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.grbDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.chkEstudiante = new System.Windows.Forms.CheckBox();
+            this.lblPlan = new System.Windows.Forms.Label();
+            this.cboPlan = new System.Windows.Forms.ComboBox();
+            this.lblTurno = new System.Windows.Forms.Label();
+            this.cboTurno = new System.Windows.Forms.ComboBox();
+            this.lblMeses = new System.Windows.Forms.Label();
+            this.txtMeses = new System.Windows.Forms.TextBox();
             this.chkCasillero = new System.Windows.Forms.CheckBox();
-            this.grpPlan = new System.Windows.Forms.GroupBox();
-            this.tbPagos = new System.Windows.Forms.TabPage();
-            this.cboCuotas = new System.Windows.Forms.ComboBox();
-            this.rbtTarjeta = new System.Windows.Forms.RadioButton();
-            this.rbtEfectivo = new System.Windows.Forms.RadioButton();
             this.grpPago = new System.Windows.Forms.GroupBox();
-            this.Datos.SuspendLayout();
-            this.tbDatos.SuspendLayout();
-            this.tbPlan.SuspendLayout();
-            this.grbDatosPersonales.SuspendLayout();
-            this.grpPlan.SuspendLayout();
-            this.tbPagos.SuspendLayout();
+            this.rbtEfectivo = new System.Windows.Forms.RadioButton();
+            this.rbtTarjeta = new System.Windows.Forms.RadioButton();
+            this.lblCuotas = new System.Windows.Forms.Label();
+            this.cboCuotas = new System.Windows.Forms.ComboBox();
+            this.lblAviso = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnCalcular = new System.Windows.Forms.Button();
+            this.btnAnterior = new System.Windows.Forms.Button();
+            this.lblPaso = new System.Windows.Forms.Label();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.pnlEncabezado.SuspendLayout();
+            this.tabInscripcion.SuspendLayout();
+            this.tpgDatos.SuspendLayout();
+            this.tpgPlan.SuspendLayout();
+            this.tpgPago.SuspendLayout();
+            this.grpPago.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtMeses
+            // pnlEncabezado
             // 
-            this.txtMeses.Location = new System.Drawing.Point(62, 71);
-            this.txtMeses.MaxLength = 2;
-            this.txtMeses.Name = "txtMeses";
-            this.txtMeses.Size = new System.Drawing.Size(100, 20);
-            this.txtMeses.TabIndex = 5;
+            this.pnlEncabezado.Controls.Add(this.lblTitulo);
+            this.pnlEncabezado.Controls.Add(this.lblSubtitulo);
+            this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
+            this.pnlEncabezado.Name = "pnlEncabezado";
+            this.pnlEncabezado.Size = new System.Drawing.Size(440, 64);
+            this.pnlEncabezado.TabIndex = 0;
             // 
-            // cboPlan
+            // lblTitulo
             // 
-            this.cboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPlan.FormattingEnabled = true;
-            this.cboPlan.Location = new System.Drawing.Point(62, 16);
-            this.cboPlan.Name = "cboPlan";
-            this.cboPlan.Size = new System.Drawing.Size(121, 21);
-            this.cboPlan.TabIndex = 9;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.lblTitulo.Location = new System.Drawing.Point(14, 8);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(180, 28);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "GIMNASIO SIGLO";
             // 
-            // lblPlan
+            // lblSubtitulo
             // 
-            this.lblPlan.AutoSize = true;
-            this.lblPlan.Location = new System.Drawing.Point(6, 16);
-            this.lblPlan.Name = "lblPlan";
-            this.lblPlan.Size = new System.Drawing.Size(28, 13);
-            this.lblPlan.TabIndex = 4;
-            this.lblPlan.Text = "Plan";
+            this.lblSubtitulo.AutoSize = true;
+            this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(140)))), ((int)(((byte)(248)))));
+            this.lblSubtitulo.Location = new System.Drawing.Point(16, 38);
+            this.lblSubtitulo.Name = "lblSubtitulo";
+            this.lblSubtitulo.Size = new System.Drawing.Size(108, 13);
+            this.lblSubtitulo.TabIndex = 1;
+            this.lblSubtitulo.Text = "Inscripción de socios";
             // 
-            // lblTurno
+            // tabInscripcion
             // 
-            this.lblTurno.AutoSize = true;
-            this.lblTurno.Location = new System.Drawing.Point(6, 44);
-            this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(35, 13);
-            this.lblTurno.TabIndex = 5;
-            this.lblTurno.Text = "Turno";
+            this.tabInscripcion.Controls.Add(this.tpgDatos);
+            this.tabInscripcion.Controls.Add(this.tpgPlan);
+            this.tabInscripcion.Controls.Add(this.tpgPago);
+            this.tabInscripcion.Location = new System.Drawing.Point(12, 76);
+            this.tabInscripcion.Name = "tabInscripcion";
+            this.tabInscripcion.SelectedIndex = 0;
+            this.tabInscripcion.Size = new System.Drawing.Size(416, 300);
+            this.tabInscripcion.TabIndex = 1;
+            this.tabInscripcion.SelectedIndexChanged += new System.EventHandler(this.tabInscripcion_SelectedIndexChanged);
             // 
-            // lblMeses
+            // tpgDatos
             // 
-            this.lblMeses.AutoSize = true;
-            this.lblMeses.Location = new System.Drawing.Point(6, 70);
-            this.lblMeses.Name = "lblMeses";
-            this.lblMeses.Size = new System.Drawing.Size(38, 13);
-            this.lblMeses.TabIndex = 6;
-            this.lblMeses.Text = "Meses";
-            // 
-            // cboTurno
-            // 
-            this.cboTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTurno.FormattingEnabled = true;
-            this.cboTurno.Location = new System.Drawing.Point(62, 44);
-            this.cboTurno.Name = "cboTurno";
-            this.cboTurno.Size = new System.Drawing.Size(121, 21);
-            this.cboTurno.TabIndex = 15;
-            // 
-            // btnCalcular
-            // 
-            this.btnCalcular.Location = new System.Drawing.Point(187, 102);
-            this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(75, 23);
-            this.btnCalcular.TabIndex = 19;
-            this.btnCalcular.Text = "&Calcular";
-            this.btnCalcular.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(105, 102);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiar.TabIndex = 20;
-            this.btnLimpiar.Text = "&Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // Datos
-            // 
-            this.Datos.Controls.Add(this.tbDatos);
-            this.Datos.Controls.Add(this.tbPlan);
-            this.Datos.Controls.Add(this.tbPagos);
-            this.Datos.Location = new System.Drawing.Point(12, 12);
-            this.Datos.Name = "Datos";
-            this.Datos.SelectedIndex = 0;
-            this.Datos.Size = new System.Drawing.Size(316, 169);
-            this.Datos.TabIndex = 25;
-            // 
-            // tbDatos
-            // 
-            this.tbDatos.Controls.Add(this.grbDatosPersonales);
-            this.tbDatos.Location = new System.Drawing.Point(4, 22);
-            this.tbDatos.Name = "tbDatos";
-            this.tbDatos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbDatos.Size = new System.Drawing.Size(308, 143);
-            this.tbDatos.TabIndex = 0;
-            this.tbDatos.Text = "Datos ";
-            this.tbDatos.UseVisualStyleBackColor = true;
-            // 
-            // tbPlan
-            // 
-            this.tbPlan.Controls.Add(this.grpPlan);
-            this.tbPlan.Location = new System.Drawing.Point(4, 22);
-            this.tbPlan.Name = "tbPlan";
-            this.tbPlan.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPlan.Size = new System.Drawing.Size(308, 143);
-            this.tbPlan.TabIndex = 1;
-            this.tbPlan.Text = "Plan";
-            this.tbPlan.UseVisualStyleBackColor = true;
-            // 
-            // lblEstudiante
-            // 
-            this.lblEstudiante.AutoSize = true;
-            this.lblEstudiante.Location = new System.Drawing.Point(6, 71);
-            this.lblEstudiante.Name = "lblEstudiante";
-            this.lblEstudiante.Size = new System.Drawing.Size(57, 13);
-            this.lblEstudiante.TabIndex = 25;
-            this.lblEstudiante.Text = "Estudiante";
-            // 
-            // chkEstudiante
-            // 
-            this.chkEstudiante.AutoSize = true;
-            this.chkEstudiante.Location = new System.Drawing.Point(78, 71);
-            this.chkEstudiante.Name = "chkEstudiante";
-            this.chkEstudiante.Size = new System.Drawing.Size(76, 17);
-            this.chkEstudiante.TabIndex = 26;
-            this.chkEstudiante.Text = "Estudiante";
-            this.chkEstudiante.UseVisualStyleBackColor = true;
-            this.chkEstudiante.CheckedChanged += new System.EventHandler(this.chkEstudiante_CheckedChanged);
-            // 
-            // lblEdad
-            // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(6, 44);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(32, 13);
-            this.lblEdad.TabIndex = 24;
-            this.lblEdad.Text = "Edad";
+            this.tpgDatos.Controls.Add(this.lblNombre);
+            this.tpgDatos.Controls.Add(this.txtNombre);
+            this.tpgDatos.Controls.Add(this.lblEdad);
+            this.tpgDatos.Controls.Add(this.txtEdad);
+            this.tpgDatos.Controls.Add(this.chkEstudiante);
+            this.tpgDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tpgDatos.Location = new System.Drawing.Point(4, 22);
+            this.tpgDatos.Name = "tpgDatos";
+            this.tpgDatos.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgDatos.Size = new System.Drawing.Size(408, 274);
+            this.tpgDatos.TabIndex = 0;
+            this.tpgDatos.Text = "Datos personales";
+            this.tpgDatos.UseVisualStyleBackColor = false;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(6, 22);
+            this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblNombre.Location = new System.Drawing.Point(24, 32);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 27;
+            this.lblNombre.Size = new System.Drawing.Size(40, 13);
+            this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Location = new System.Drawing.Point(78, 41);
-            this.txtEdad.MaxLength = 3;
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(100, 20);
-            this.txtEdad.TabIndex = 23;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(78, 19);
-            this.txtNombre.MaxLength = 30;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.txtNombre.Location = new System.Drawing.Point(110, 29);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 28;
+            this.txtNombre.MaxLength = 30;
+            this.txtNombre.Size = new System.Drawing.Size(270, 20);
+            this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.ValidarDatos_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
-            // grbDatosPersonales
+            // lblEdad
             // 
-            this.grbDatosPersonales.Controls.Add(this.txtNombre);
-            this.grbDatosPersonales.Controls.Add(this.txtEdad);
-            this.grbDatosPersonales.Controls.Add(this.chkEstudiante);
-            this.grbDatosPersonales.Controls.Add(this.lblEstudiante);
-            this.grbDatosPersonales.Controls.Add(this.lblNombre);
-            this.grbDatosPersonales.Controls.Add(this.lblEdad);
-            this.grbDatosPersonales.Location = new System.Drawing.Point(6, 6);
-            this.grbDatosPersonales.Name = "grbDatosPersonales";
-            this.grbDatosPersonales.Size = new System.Drawing.Size(256, 117);
-            this.grbDatosPersonales.TabIndex = 29;
-            this.grbDatosPersonales.TabStop = false;
-            this.grbDatosPersonales.Text = "Datos Personales";
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblEdad.Location = new System.Drawing.Point(24, 72);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(40, 13);
+            this.lblEdad.TabIndex = 2;
+            this.lblEdad.Text = "Edad";
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEdad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.txtEdad.Location = new System.Drawing.Point(110, 69);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.MaxLength = 3;
+            this.txtEdad.Size = new System.Drawing.Size(70, 20);
+            this.txtEdad.TabIndex = 3;
+            this.txtEdad.TextChanged += new System.EventHandler(this.ValidarDatos_TextChanged);
+            this.txtEdad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoloNumeros_KeyPress);
+            // 
+            // chkEstudiante
+            // 
+            this.chkEstudiante.AutoSize = true;
+            this.chkEstudiante.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.chkEstudiante.Location = new System.Drawing.Point(110, 108);
+            this.chkEstudiante.Name = "chkEstudiante";
+            this.chkEstudiante.Size = new System.Drawing.Size(76, 17);
+            this.chkEstudiante.TabIndex = 4;
+            this.chkEstudiante.Text = "Estudiante";
+            this.chkEstudiante.UseVisualStyleBackColor = true;
+            // 
+            // tpgPlan
+            // 
+            this.tpgPlan.Controls.Add(this.lblPlan);
+            this.tpgPlan.Controls.Add(this.cboPlan);
+            this.tpgPlan.Controls.Add(this.lblTurno);
+            this.tpgPlan.Controls.Add(this.cboTurno);
+            this.tpgPlan.Controls.Add(this.lblMeses);
+            this.tpgPlan.Controls.Add(this.txtMeses);
+            this.tpgPlan.Controls.Add(this.chkCasillero);
+            this.tpgPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tpgPlan.Location = new System.Drawing.Point(4, 22);
+            this.tpgPlan.Name = "tpgPlan";
+            this.tpgPlan.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgPlan.Size = new System.Drawing.Size(408, 274);
+            this.tpgPlan.TabIndex = 1;
+            this.tpgPlan.Text = "Plan";
+            this.tpgPlan.UseVisualStyleBackColor = false;
+            // 
+            // lblPlan
+            // 
+            this.lblPlan.AutoSize = true;
+            this.lblPlan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblPlan.Location = new System.Drawing.Point(24, 32);
+            this.lblPlan.Name = "lblPlan";
+            this.lblPlan.Size = new System.Drawing.Size(40, 13);
+            this.lblPlan.TabIndex = 0;
+            this.lblPlan.Text = "Plan";
+            // 
+            // cboPlan
+            // 
+            this.cboPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboPlan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.cboPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPlan.FormattingEnabled = true;
+            this.cboPlan.Items.AddRange(new object[] {
+            "Musculación",
+            "Funcional",
+            "Natación"});
+            this.cboPlan.Location = new System.Drawing.Point(110, 29);
+            this.cboPlan.Name = "cboPlan";
+            this.cboPlan.Size = new System.Drawing.Size(180, 21);
+            this.cboPlan.TabIndex = 1;
+            // 
+            // lblTurno
+            // 
+            this.lblTurno.AutoSize = true;
+            this.lblTurno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblTurno.Location = new System.Drawing.Point(24, 72);
+            this.lblTurno.Name = "lblTurno";
+            this.lblTurno.Size = new System.Drawing.Size(40, 13);
+            this.lblTurno.TabIndex = 2;
+            this.lblTurno.Text = "Turno";
+            // 
+            // cboTurno
+            // 
+            this.cboTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboTurno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.cboTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTurno.FormattingEnabled = true;
+            this.cboTurno.Items.AddRange(new object[] {
+            "Mañana",
+            "Tarde",
+            "Noche"});
+            this.cboTurno.Location = new System.Drawing.Point(110, 69);
+            this.cboTurno.Name = "cboTurno";
+            this.cboTurno.Size = new System.Drawing.Size(180, 21);
+            this.cboTurno.TabIndex = 3;
+            // 
+            // lblMeses
+            // 
+            this.lblMeses.AutoSize = true;
+            this.lblMeses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblMeses.Location = new System.Drawing.Point(24, 112);
+            this.lblMeses.Name = "lblMeses";
+            this.lblMeses.Size = new System.Drawing.Size(40, 13);
+            this.lblMeses.TabIndex = 4;
+            this.lblMeses.Text = "Meses";
+            // 
+            // txtMeses
+            // 
+            this.txtMeses.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.txtMeses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMeses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.txtMeses.Location = new System.Drawing.Point(110, 109);
+            this.txtMeses.Name = "txtMeses";
+            this.txtMeses.MaxLength = 2;
+            this.txtMeses.Size = new System.Drawing.Size(70, 20);
+            this.txtMeses.TabIndex = 5;
+            this.txtMeses.TextChanged += new System.EventHandler(this.ValidarDatos_TextChanged);
+            this.txtMeses.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoloNumeros_KeyPress);
             // 
             // chkCasillero
             // 
             this.chkCasillero.AutoSize = true;
-            this.chkCasillero.Location = new System.Drawing.Point(168, 74);
+            this.chkCasillero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.chkCasillero.Location = new System.Drawing.Point(110, 148);
             this.chkCasillero.Name = "chkCasillero";
-            this.chkCasillero.Size = new System.Drawing.Size(131, 17);
-            this.chkCasillero.TabIndex = 21;
-            this.chkCasillero.Text = "Casillero ($ 3000/mes)";
+            this.chkCasillero.Size = new System.Drawing.Size(135, 17);
+            this.chkCasillero.TabIndex = 6;
+            this.chkCasillero.Text = "Casillero ($ 3.000/mes)";
             this.chkCasillero.UseVisualStyleBackColor = true;
-            this.chkCasillero.CheckedChanged += new System.EventHandler(this.chkCasillero_CheckedChanged);
             // 
-            // grpPlan
+            // tpgPago
             // 
-            this.grpPlan.Controls.Add(this.chkCasillero);
-            this.grpPlan.Controls.Add(this.lblPlan);
-            this.grpPlan.Controls.Add(this.txtMeses);
-            this.grpPlan.Controls.Add(this.cboPlan);
-            this.grpPlan.Controls.Add(this.lblTurno);
-            this.grpPlan.Controls.Add(this.lblMeses);
-            this.grpPlan.Controls.Add(this.cboTurno);
-            this.grpPlan.Location = new System.Drawing.Point(8, 6);
-            this.grpPlan.Name = "grpPlan";
-            this.grpPlan.Size = new System.Drawing.Size(294, 107);
-            this.grpPlan.TabIndex = 23;
-            this.grpPlan.TabStop = false;
-            this.grpPlan.Text = "Plan";
+            this.tpgPago.Controls.Add(this.grpPago);
+            this.tpgPago.Controls.Add(this.lblAviso);
+            this.tpgPago.Controls.Add(this.btnLimpiar);
+            this.tpgPago.Controls.Add(this.btnCalcular);
+            this.tpgPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tpgPago.Location = new System.Drawing.Point(4, 22);
+            this.tpgPago.Name = "tpgPago";
+            this.tpgPago.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgPago.Size = new System.Drawing.Size(408, 274);
+            this.tpgPago.TabIndex = 2;
+            this.tpgPago.Text = "Forma de pago";
+            this.tpgPago.UseVisualStyleBackColor = false;
             // 
-            // tbPagos
+            // grpPago
             // 
-            this.tbPagos.Controls.Add(this.cboCuotas);
-            this.tbPagos.Controls.Add(this.btnLimpiar);
-            this.tbPagos.Controls.Add(this.rbtTarjeta);
-            this.tbPagos.Controls.Add(this.btnCalcular);
-            this.tbPagos.Controls.Add(this.rbtEfectivo);
-            this.tbPagos.Controls.Add(this.grpPago);
-            this.tbPagos.Location = new System.Drawing.Point(4, 22);
-            this.tbPagos.Name = "tbPagos";
-            this.tbPagos.Padding = new System.Windows.Forms.Padding(3);
-            this.tbPagos.Size = new System.Drawing.Size(308, 143);
-            this.tbPagos.TabIndex = 2;
-            this.tbPagos.Text = "Pagos";
-            this.tbPagos.UseVisualStyleBackColor = true;
-            // 
-            // cboCuotas
-            // 
-            this.cboCuotas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCuotas.FormattingEnabled = true;
-            this.cboCuotas.Location = new System.Drawing.Point(116, 53);
-            this.cboCuotas.Name = "cboCuotas";
-            this.cboCuotas.Size = new System.Drawing.Size(121, 21);
-            this.cboCuotas.TabIndex = 27;
-            // 
-            // rbtTarjeta
-            // 
-            this.rbtTarjeta.AutoSize = true;
-            this.rbtTarjeta.Location = new System.Drawing.Point(116, 30);
-            this.rbtTarjeta.Name = "rbtTarjeta";
-            this.rbtTarjeta.Size = new System.Drawing.Size(58, 17);
-            this.rbtTarjeta.TabIndex = 26;
-            this.rbtTarjeta.TabStop = true;
-            this.rbtTarjeta.Text = "Tarjeta";
-            this.rbtTarjeta.UseVisualStyleBackColor = true;
+            this.grpPago.Controls.Add(this.rbtEfectivo);
+            this.grpPago.Controls.Add(this.rbtTarjeta);
+            this.grpPago.Controls.Add(this.lblCuotas);
+            this.grpPago.Controls.Add(this.cboCuotas);
+            this.grpPago.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.grpPago.Location = new System.Drawing.Point(16, 14);
+            this.grpPago.Name = "grpPago";
+            this.grpPago.Size = new System.Drawing.Size(376, 104);
+            this.grpPago.TabIndex = 0;
+            this.grpPago.TabStop = false;
+            this.grpPago.Text = "Forma de pago";
             // 
             // rbtEfectivo
             // 
             this.rbtEfectivo.AutoSize = true;
-            this.rbtEfectivo.Location = new System.Drawing.Point(116, 7);
+            this.rbtEfectivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.rbtEfectivo.Location = new System.Drawing.Point(20, 28);
             this.rbtEfectivo.Name = "rbtEfectivo";
             this.rbtEfectivo.Size = new System.Drawing.Size(64, 17);
-            this.rbtEfectivo.TabIndex = 25;
+            this.rbtEfectivo.TabIndex = 0;
             this.rbtEfectivo.TabStop = true;
             this.rbtEfectivo.Text = "Efectivo";
             this.rbtEfectivo.UseVisualStyleBackColor = true;
             // 
-            // grpPago
+            // rbtTarjeta
             // 
-            this.grpPago.Location = new System.Drawing.Point(16, 6);
-            this.grpPago.Name = "grpPago";
-            this.grpPago.Size = new System.Drawing.Size(246, 74);
-            this.grpPago.TabIndex = 28;
-            this.grpPago.TabStop = false;
-            this.grpPago.Text = "Formas de pago";
+            this.rbtTarjeta.AutoSize = true;
+            this.rbtTarjeta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.rbtTarjeta.Location = new System.Drawing.Point(20, 62);
+            this.rbtTarjeta.Name = "rbtTarjeta";
+            this.rbtTarjeta.Size = new System.Drawing.Size(58, 17);
+            this.rbtTarjeta.TabIndex = 1;
+            this.rbtTarjeta.Text = "Tarjeta";
+            this.rbtTarjeta.UseVisualStyleBackColor = true;
+            this.rbtTarjeta.CheckedChanged += new System.EventHandler(this.rbtTarjeta_CheckedChanged);
+            // 
+            // lblCuotas
+            // 
+            this.lblCuotas.AutoSize = true;
+            this.lblCuotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblCuotas.Location = new System.Drawing.Point(150, 64);
+            this.lblCuotas.Name = "lblCuotas";
+            this.lblCuotas.Size = new System.Drawing.Size(40, 13);
+            this.lblCuotas.TabIndex = 2;
+            this.lblCuotas.Text = "Cuotas";
+            // 
+            // cboCuotas
+            // 
+            this.cboCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.cboCuotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.cboCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCuotas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCuotas.Enabled = false;
+            this.cboCuotas.FormattingEnabled = true;
+            this.cboCuotas.Items.AddRange(new object[] {
+            "1",
+            "3",
+            "6"});
+            this.cboCuotas.Location = new System.Drawing.Point(205, 60);
+            this.cboCuotas.Name = "cboCuotas";
+            this.cboCuotas.Size = new System.Drawing.Size(80, 21);
+            this.cboCuotas.TabIndex = 3;
+            // 
+            // lblAviso
+            // 
+            this.lblAviso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(140)))), ((int)(((byte)(248)))));
+            this.lblAviso.Location = new System.Drawing.Point(16, 132);
+            this.lblAviso.Name = "lblAviso";
+            this.lblAviso.Size = new System.Drawing.Size(376, 32);
+            this.lblAviso.TabIndex = 1;
+            this.lblAviso.Text = "Completá nombre, edad y meses para habilitar el botón Calcular.";
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.btnLimpiar.Location = new System.Drawing.Point(186, 206);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(100, 36);
+            this.btnLimpiar.TabIndex = 5;
+            this.btnLimpiar.Text = "&Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnCalcular
+            // 
+            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.btnCalcular.Enabled = false;
+            this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalcular.FlatAppearance.BorderSize = 0;
+            this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnCalcular.Location = new System.Drawing.Point(292, 206);
+            this.btnCalcular.Name = "btnCalcular";
+            this.btnCalcular.Size = new System.Drawing.Size(100, 36);
+            this.btnCalcular.TabIndex = 4;
+            this.btnCalcular.Text = "&Calcular";
+            this.btnCalcular.UseVisualStyleBackColor = false;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.btnAnterior.Enabled = false;
+            this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnterior.FlatAppearance.BorderSize = 0;
+            this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnterior.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnterior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.btnAnterior.Location = new System.Drawing.Point(12, 392);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(110, 34);
+            this.btnAnterior.TabIndex = 2;
+            this.btnAnterior.Text = "< &Anterior";
+            this.btnAnterior.UseVisualStyleBackColor = false;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            // 
+            // lblPaso
+            // 
+            this.lblPaso.AutoSize = true;
+            this.lblPaso.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.lblPaso.Location = new System.Drawing.Point(184, 402);
+            this.lblPaso.Name = "lblPaso";
+            this.lblPaso.Size = new System.Drawing.Size(66, 15);
+            this.lblPaso.TabIndex = 3;
+            this.lblPaso.Text = "Paso 1 de 3";
+            // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.btnSiguiente.Enabled = false;
+            this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguiente.FlatAppearance.BorderSize = 0;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.btnSiguiente.Location = new System.Drawing.Point(318, 392);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(110, 34);
+            this.btnSiguiente.TabIndex = 4;
+            this.btnSiguiente.Text = "&Siguiente >";
+            this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // frmInscripcion
             // 
+            this.AcceptButton = this.btnCalcular;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 208);
-            this.Controls.Add(this.Datos);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.ClientSize = new System.Drawing.Size(440, 442);
+            this.Controls.Add(this.pnlEncabezado);
+            this.Controls.Add(this.tabInscripcion);
+            this.Controls.Add(this.btnAnterior);
+            this.Controls.Add(this.lblPaso);
+            this.Controls.Add(this.btnSiguiente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "frmInscripcion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gimnasio Siglo - Inscripcion";
-            this.Load += new System.EventHandler(this.frmInscripcion_Load_1);
-            this.Datos.ResumeLayout(false);
-            this.tbDatos.ResumeLayout(false);
-            this.tbPlan.ResumeLayout(false);
-            this.grbDatosPersonales.ResumeLayout(false);
-            this.grbDatosPersonales.PerformLayout();
-            this.grpPlan.ResumeLayout(false);
-            this.grpPlan.PerformLayout();
-            this.tbPagos.ResumeLayout(false);
-            this.tbPagos.PerformLayout();
+            this.Text = "Gimnasio Siglo — Inscripción";
+            this.Load += new System.EventHandler(this.frmInscripcion_Load);
+            this.pnlEncabezado.ResumeLayout(false);
+            this.pnlEncabezado.PerformLayout();
+            this.tabInscripcion.ResumeLayout(false);
+            this.tpgDatos.ResumeLayout(false);
+            this.tpgDatos.PerformLayout();
+            this.tpgPlan.ResumeLayout(false);
+            this.tpgPlan.PerformLayout();
+            this.tpgPago.ResumeLayout(false);
+            this.tpgPago.PerformLayout();
+            this.grpPago.ResumeLayout(false);
+            this.grpPago.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtMeses;
-        private System.Windows.Forms.ComboBox cboPlan;
-        private System.Windows.Forms.Label lblPlan;
-        private System.Windows.Forms.Label lblTurno;
-        private System.Windows.Forms.Label lblMeses;
-        private System.Windows.Forms.ComboBox cboTurno;
-        private System.Windows.Forms.Button btnCalcular;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.TabControl Datos;
-        private System.Windows.Forms.TabPage tbDatos;
-        private System.Windows.Forms.TabPage tbPlan;
-        private System.Windows.Forms.Label lblEstudiante;
-        private System.Windows.Forms.CheckBox chkEstudiante;
-        private System.Windows.Forms.Label lblEdad;
+
+        private System.Windows.Forms.Panel pnlEncabezado;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblSubtitulo;
+        private System.Windows.Forms.TabControl tabInscripcion;
+        private System.Windows.Forms.TabPage tpgDatos;
+        private System.Windows.Forms.TabPage tpgPlan;
+        private System.Windows.Forms.TabPage tpgPago;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtEdad;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.GroupBox grbDatosPersonales;
-        private System.Windows.Forms.GroupBox grpPlan;
+        private System.Windows.Forms.Label lblEdad;
+        private System.Windows.Forms.TextBox txtEdad;
+        private System.Windows.Forms.CheckBox chkEstudiante;
+        private System.Windows.Forms.Label lblPlan;
+        private System.Windows.Forms.ComboBox cboPlan;
+        private System.Windows.Forms.Label lblTurno;
+        private System.Windows.Forms.ComboBox cboTurno;
+        private System.Windows.Forms.Label lblMeses;
+        private System.Windows.Forms.TextBox txtMeses;
         private System.Windows.Forms.CheckBox chkCasillero;
-        private System.Windows.Forms.TabPage tbPagos;
-        private System.Windows.Forms.ComboBox cboCuotas;
-        private System.Windows.Forms.RadioButton rbtTarjeta;
-        private System.Windows.Forms.RadioButton rbtEfectivo;
         private System.Windows.Forms.GroupBox grpPago;
+        private System.Windows.Forms.RadioButton rbtEfectivo;
+        private System.Windows.Forms.RadioButton rbtTarjeta;
+        private System.Windows.Forms.Label lblCuotas;
+        private System.Windows.Forms.ComboBox cboCuotas;
+        private System.Windows.Forms.Label lblAviso;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnCalcular;
+        private System.Windows.Forms.Button btnAnterior;
+        private System.Windows.Forms.Label lblPaso;
+        private System.Windows.Forms.Button btnSiguiente;
     }
 }
-

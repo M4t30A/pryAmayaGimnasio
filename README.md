@@ -8,6 +8,8 @@ El sistema permite gestionar la inscripción de nuevos socios a un gimnasio, cal
 
 ## 🚀 Características Principales
 
+- **Pantalla de bienvenida:** al iniciar se muestra una pantalla con el nombre del gimnasio, un mensaje de bienvenida y el botón *Comenzar inscripción*.
+- **Formulario con pestañas:** *Datos personales* → *Plan* → *Forma de pago*, con navegación por botones *Anterior* / *Siguiente* y un indicador de paso.
 - **Gestión de Planes y Servicios:** Cálculo de costos de planes principales (*Musculación, Funcional, Natación*) y opcionales adicionales (*Casillero*).
 - **Validaciones y Control de Entrada:**
   - Filtrado de caracteres en campos numéricos (Edad y Meses solo admiten dígitos y borrar).
@@ -33,16 +35,36 @@ El sistema permite gestionar la inscripción de nuevos socios a un gimnasio, cal
 
 ---
 
+## 🎨 Paleta de Colores
+
+| Rol | Color |
+| :--- | :--- |
+| Fondo principal | `#0F172A` |
+| Paneles y contenedores | `#1E293B` |
+| Bordes | `#334155` |
+| Texto principal | `#F8FAFC` |
+| Texto secundario | `#94A3B8` |
+| Primario (botones y acciones) | `#38BDF8` |
+| Acento | `#818CF8` |
+
+Los colores se aplican desde el Diseñador y, para solapas, `GroupBox` y botones deshabilitados, desde el método `AplicarPaleta()` de `frmInscripcion.cs`.
+
+---
+
 ## 📋 Casos de Prueba Incluidos
 
-El proyecto cuenta con verificación basada en la siguiente matriz de casos de prueba:
+El proyecto se verificó con los 8 casos de la guía (cálculo: subtotal → descuento por edad/estudiante → ajuste por forma de pago):
 
-| Socio | Edad | Plan | Meses | Casillero | Estudiante | Pago | Subtotal | Total Esperado |
-| :--- | :---: | :--- | :---: | :---: | :---: | :--- | :---: | :---: |
-| **Ana** | 16 | Musculación | 3 | No | No | Efectivo | $45.000 | **$30.375** |
-| **Bruno** | 22 | Funcional | 2 | Sí | Sí | Tarjeta (3c) | $42.000 | **$39.270** |
-| **Carla** | 70 | Natación | 1 | Sí | No | Tarjeta (6c) | $25.000 | **$21.000** |
-| **Diego** | 30 | Musculación | 12 | No | No | Tarjeta (1c) | $180.000 | **$180.000** |
+| Socio | Edad | Plan | Meses | Casillero | Estudiante | Pago | Subtotal | Desc. | Total | Cuota |
+| :--- | :---: | :--- | :---: | :---: | :---: | :--- | ---: | :---: | ---: | ---: |
+| **Ana** | 16 | Musculación | 3 | No | No | Efectivo | $45.000 | 25% | **$30.375** | $30.375 |
+| **Bruno** | 22 | Funcional | 2 | Sí | Sí | Tarjeta (3c) | $42.000 | 15% | **$39.270** | $13.090 |
+| **Carla** | 70 | Natación | 1 | Sí | No | Tarjeta (6c) | $25.000 | 30% | **$21.000** | $3.500 |
+| **Diego** | 30 | Musculación | 12 | No | No | Tarjeta (1c) | $180.000 | 0% | **$180.000** | $180.000 |
+| **Fede** | 16 | Funcional | 1 | No | Sí | Efectivo | $18.000 | 25% | **$12.150** | $12.150 |
+| **Gladys** | 65 | Funcional | 2 | No | Sí | Tarjeta (3c) | $36.000 | 30% | **$27.720** | $9.240 |
+| **Eva** | 12 | Natación | 2 | No | No | Efectivo | — | — | No calcula (edad mínima) | — |
+| **Hugo** | 25 | Funcional | 15 | No | No | Efectivo | — | — | No calcula (meses 1 a 12) | — |
 
 ---
 
