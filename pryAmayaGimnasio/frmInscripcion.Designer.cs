@@ -33,13 +33,12 @@
             this.lblSubtitulo = new System.Windows.Forms.Label();
             this.tabInscripcion = new System.Windows.Forms.TabControl();
             this.tpgDatos = new System.Windows.Forms.TabPage();
-            this.tpgPlan = new System.Windows.Forms.TabPage();
-            this.tpgPago = new System.Windows.Forms.TabPage();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblEdad = new System.Windows.Forms.Label();
             this.txtEdad = new System.Windows.Forms.TextBox();
             this.chkEstudiante = new System.Windows.Forms.CheckBox();
+            this.tpgPlan = new System.Windows.Forms.TabPage();
             this.lblPlan = new System.Windows.Forms.Label();
             this.cboPlan = new System.Windows.Forms.ComboBox();
             this.lblTurno = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.lblMeses = new System.Windows.Forms.Label();
             this.txtMeses = new System.Windows.Forms.TextBox();
             this.chkCasillero = new System.Windows.Forms.CheckBox();
+            this.tpgPago = new System.Windows.Forms.TabPage();
             this.grpPago = new System.Windows.Forms.GroupBox();
             this.rbtEfectivo = new System.Windows.Forms.RadioButton();
             this.rbtTarjeta = new System.Windows.Forms.RadioButton();
@@ -58,19 +58,23 @@
             this.btnAnterior = new System.Windows.Forms.Button();
             this.lblPaso = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
+            this.tpgConsultar = new System.Windows.Forms.TabPage();
+            this.lstConsultar = new System.Windows.Forms.ListBox();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlEncabezado.SuspendLayout();
             this.tabInscripcion.SuspendLayout();
             this.tpgDatos.SuspendLayout();
             this.tpgPlan.SuspendLayout();
             this.tpgPago.SuspendLayout();
             this.grpPago.SuspendLayout();
+            this.tpgConsultar.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlEncabezado
             // 
+            this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.pnlEncabezado.Controls.Add(this.lblTitulo);
             this.pnlEncabezado.Controls.Add(this.lblSubtitulo);
-            this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
             this.pnlEncabezado.Name = "pnlEncabezado";
@@ -84,7 +88,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.lblTitulo.Location = new System.Drawing.Point(14, 8);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(180, 28);
+            this.lblTitulo.Size = new System.Drawing.Size(175, 28);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "GIMNASIO SIGLO";
             // 
@@ -94,7 +98,7 @@
             this.lblSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(129)))), ((int)(((byte)(140)))), ((int)(((byte)(248)))));
             this.lblSubtitulo.Location = new System.Drawing.Point(16, 38);
             this.lblSubtitulo.Name = "lblSubtitulo";
-            this.lblSubtitulo.Size = new System.Drawing.Size(108, 13);
+            this.lblSubtitulo.Size = new System.Drawing.Size(106, 13);
             this.lblSubtitulo.TabIndex = 1;
             this.lblSubtitulo.Text = "Inscripción de socios";
             // 
@@ -103,28 +107,28 @@
             this.tabInscripcion.Controls.Add(this.tpgDatos);
             this.tabInscripcion.Controls.Add(this.tpgPlan);
             this.tabInscripcion.Controls.Add(this.tpgPago);
-            this.tabInscripcion.Location = new System.Drawing.Point(12, 76);
+            this.tabInscripcion.Controls.Add(this.tpgConsultar);
+            this.tabInscripcion.Location = new System.Drawing.Point(12, 78);
             this.tabInscripcion.Name = "tabInscripcion";
             this.tabInscripcion.SelectedIndex = 0;
-            this.tabInscripcion.Size = new System.Drawing.Size(416, 300);
+            this.tabInscripcion.Size = new System.Drawing.Size(416, 298);
             this.tabInscripcion.TabIndex = 1;
             this.tabInscripcion.SelectedIndexChanged += new System.EventHandler(this.tabInscripcion_SelectedIndexChanged);
             // 
             // tpgDatos
             // 
+            this.tpgDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.tpgDatos.Controls.Add(this.lblNombre);
             this.tpgDatos.Controls.Add(this.txtNombre);
             this.tpgDatos.Controls.Add(this.lblEdad);
             this.tpgDatos.Controls.Add(this.txtEdad);
             this.tpgDatos.Controls.Add(this.chkEstudiante);
-            this.tpgDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.tpgDatos.Location = new System.Drawing.Point(4, 22);
             this.tpgDatos.Name = "tpgDatos";
             this.tpgDatos.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgDatos.Size = new System.Drawing.Size(408, 274);
+            this.tpgDatos.Size = new System.Drawing.Size(408, 272);
             this.tpgDatos.TabIndex = 0;
             this.tpgDatos.Text = "Datos personales";
-            this.tpgDatos.UseVisualStyleBackColor = false;
             // 
             // lblNombre
             // 
@@ -132,7 +136,7 @@
             this.lblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblNombre.Location = new System.Drawing.Point(24, 32);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(40, 13);
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
@@ -142,8 +146,8 @@
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.txtNombre.Location = new System.Drawing.Point(110, 29);
-            this.txtNombre.Name = "txtNombre";
             this.txtNombre.MaxLength = 30;
+            this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(270, 20);
             this.txtNombre.TabIndex = 1;
             this.txtNombre.TextChanged += new System.EventHandler(this.ValidarDatos_TextChanged);
@@ -155,7 +159,7 @@
             this.lblEdad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblEdad.Location = new System.Drawing.Point(24, 72);
             this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(40, 13);
+            this.lblEdad.Size = new System.Drawing.Size(32, 13);
             this.lblEdad.TabIndex = 2;
             this.lblEdad.Text = "Edad";
             // 
@@ -165,8 +169,8 @@
             this.txtEdad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEdad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.txtEdad.Location = new System.Drawing.Point(110, 69);
-            this.txtEdad.Name = "txtEdad";
             this.txtEdad.MaxLength = 3;
+            this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(70, 20);
             this.txtEdad.TabIndex = 3;
             this.txtEdad.TextChanged += new System.EventHandler(this.ValidarDatos_TextChanged);
@@ -185,6 +189,7 @@
             // 
             // tpgPlan
             // 
+            this.tpgPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.tpgPlan.Controls.Add(this.lblPlan);
             this.tpgPlan.Controls.Add(this.cboPlan);
             this.tpgPlan.Controls.Add(this.lblTurno);
@@ -192,14 +197,12 @@
             this.tpgPlan.Controls.Add(this.lblMeses);
             this.tpgPlan.Controls.Add(this.txtMeses);
             this.tpgPlan.Controls.Add(this.chkCasillero);
-            this.tpgPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.tpgPlan.Location = new System.Drawing.Point(4, 22);
             this.tpgPlan.Name = "tpgPlan";
             this.tpgPlan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgPlan.Size = new System.Drawing.Size(408, 274);
+            this.tpgPlan.Size = new System.Drawing.Size(408, 272);
             this.tpgPlan.TabIndex = 1;
             this.tpgPlan.Text = "Plan";
-            this.tpgPlan.UseVisualStyleBackColor = false;
             // 
             // lblPlan
             // 
@@ -207,16 +210,16 @@
             this.lblPlan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblPlan.Location = new System.Drawing.Point(24, 32);
             this.lblPlan.Name = "lblPlan";
-            this.lblPlan.Size = new System.Drawing.Size(40, 13);
+            this.lblPlan.Size = new System.Drawing.Size(28, 13);
             this.lblPlan.TabIndex = 0;
             this.lblPlan.Text = "Plan";
             // 
             // cboPlan
             // 
             this.cboPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.cboPlan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.cboPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboPlan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cboPlan.FormattingEnabled = true;
             this.cboPlan.Items.AddRange(new object[] {
             "Musculación",
@@ -233,16 +236,16 @@
             this.lblTurno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblTurno.Location = new System.Drawing.Point(24, 72);
             this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(40, 13);
+            this.lblTurno.Size = new System.Drawing.Size(35, 13);
             this.lblTurno.TabIndex = 2;
             this.lblTurno.Text = "Turno";
             // 
             // cboTurno
             // 
             this.cboTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.cboTurno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.cboTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTurno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTurno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cboTurno.FormattingEnabled = true;
             this.cboTurno.Items.AddRange(new object[] {
             "Mañana",
@@ -259,7 +262,7 @@
             this.lblMeses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblMeses.Location = new System.Drawing.Point(24, 112);
             this.lblMeses.Name = "lblMeses";
-            this.lblMeses.Size = new System.Drawing.Size(40, 13);
+            this.lblMeses.Size = new System.Drawing.Size(38, 13);
             this.lblMeses.TabIndex = 4;
             this.lblMeses.Text = "Meses";
             // 
@@ -269,8 +272,8 @@
             this.txtMeses.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMeses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.txtMeses.Location = new System.Drawing.Point(110, 109);
-            this.txtMeses.Name = "txtMeses";
             this.txtMeses.MaxLength = 2;
+            this.txtMeses.Name = "txtMeses";
             this.txtMeses.Size = new System.Drawing.Size(70, 20);
             this.txtMeses.TabIndex = 5;
             this.txtMeses.TextChanged += new System.EventHandler(this.ValidarDatos_TextChanged);
@@ -282,25 +285,24 @@
             this.chkCasillero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.chkCasillero.Location = new System.Drawing.Point(110, 148);
             this.chkCasillero.Name = "chkCasillero";
-            this.chkCasillero.Size = new System.Drawing.Size(135, 17);
+            this.chkCasillero.Size = new System.Drawing.Size(134, 17);
             this.chkCasillero.TabIndex = 6;
             this.chkCasillero.Text = "Casillero ($ 3.000/mes)";
             this.chkCasillero.UseVisualStyleBackColor = true;
             // 
             // tpgPago
             // 
+            this.tpgPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.tpgPago.Controls.Add(this.grpPago);
             this.tpgPago.Controls.Add(this.lblAviso);
             this.tpgPago.Controls.Add(this.btnLimpiar);
             this.tpgPago.Controls.Add(this.btnCalcular);
-            this.tpgPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
             this.tpgPago.Location = new System.Drawing.Point(4, 22);
             this.tpgPago.Name = "tpgPago";
             this.tpgPago.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgPago.Size = new System.Drawing.Size(408, 274);
+            this.tpgPago.Size = new System.Drawing.Size(408, 272);
             this.tpgPago.TabIndex = 2;
             this.tpgPago.Text = "Forma de pago";
-            this.tpgPago.UseVisualStyleBackColor = false;
             // 
             // grpPago
             // 
@@ -353,10 +355,10 @@
             // cboCuotas
             // 
             this.cboCuotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.cboCuotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.cboCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboCuotas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCuotas.Enabled = false;
+            this.cboCuotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboCuotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.cboCuotas.FormattingEnabled = true;
             this.cboCuotas.Items.AddRange(new object[] {
             "1",
@@ -395,8 +397,8 @@
             // btnCalcular
             // 
             this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.btnCalcular.Enabled = false;
             this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalcular.Enabled = false;
             this.btnCalcular.FlatAppearance.BorderSize = 0;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -412,8 +414,8 @@
             // btnAnterior
             // 
             this.btnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
-            this.btnAnterior.Enabled = false;
             this.btnAnterior.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAnterior.Enabled = false;
             this.btnAnterior.FlatAppearance.BorderSize = 0;
             this.btnAnterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnterior.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -433,15 +435,16 @@
             this.lblPaso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.lblPaso.Location = new System.Drawing.Point(184, 402);
             this.lblPaso.Name = "lblPaso";
-            this.lblPaso.Size = new System.Drawing.Size(66, 15);
+            this.lblPaso.Size = new System.Drawing.Size(69, 15);
             this.lblPaso.TabIndex = 3;
-            this.lblPaso.Text = "Paso 1 de 3";
+            this.lblPaso.Text = "Paso 1 de 4";
+            this.lblPaso.Click += new System.EventHandler(this.lblPaso_Click);
             // 
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
-            this.btnSiguiente.Enabled = false;
             this.btnSiguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguiente.Enabled = false;
             this.btnSiguiente.FlatAppearance.BorderSize = 0;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSiguiente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -453,6 +456,37 @@
             this.btnSiguiente.Text = "&Siguiente >";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            // 
+            // tpgConsultar
+            // 
+            this.tpgConsultar.Controls.Add(this.btnConsultar);
+            this.tpgConsultar.Controls.Add(this.lstConsultar);
+            this.tpgConsultar.Location = new System.Drawing.Point(4, 22);
+            this.tpgConsultar.Name = "tpgConsultar";
+            this.tpgConsultar.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgConsultar.Size = new System.Drawing.Size(408, 272);
+            this.tpgConsultar.TabIndex = 3;
+            this.tpgConsultar.Text = "Consultar";
+            this.tpgConsultar.UseVisualStyleBackColor = true;
+            // 
+            // lstConsultar
+            // 
+            this.lstConsultar.FormattingEnabled = true;
+            this.lstConsultar.Location = new System.Drawing.Point(6, 56);
+            this.lstConsultar.Name = "lstConsultar";
+            this.lstConsultar.Size = new System.Drawing.Size(386, 212);
+            this.lstConsultar.TabIndex = 0;
+            this.lstConsultar.SelectedIndexChanged += new System.EventHandler(this.lstConsultar_SelectedIndexChanged);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Location = new System.Drawing.Point(6, 6);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(114, 44);
+            this.btnConsultar.TabIndex = 1;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // frmInscripcion
             // 
@@ -480,10 +514,11 @@
             this.tpgPlan.ResumeLayout(false);
             this.tpgPlan.PerformLayout();
             this.tpgPago.ResumeLayout(false);
-            this.tpgPago.PerformLayout();
             this.grpPago.ResumeLayout(false);
             this.grpPago.PerformLayout();
+            this.tpgConsultar.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -519,5 +554,8 @@
         private System.Windows.Forms.Button btnAnterior;
         private System.Windows.Forms.Label lblPaso;
         private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.TabPage tpgConsultar;
+        private System.Windows.Forms.ListBox lstConsultar;
+        private System.Windows.Forms.Button btnConsultar;
     }
 }

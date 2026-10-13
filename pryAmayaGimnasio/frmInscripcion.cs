@@ -29,6 +29,11 @@ namespace pryAmayaGimnasio
         const decimal RECARGO_3_CUOTAS = 0.10m;
         const decimal RECARGO_6_CUOTAS = 0.20m;
 
+        // Array unidimensional para almacenar los socios y su contador
+        const int MAX_SOCIOS = 20;
+        SOCIO[] arraySocios = new SOCIO[MAX_SOCIOS];
+        int indiceSocios = 0;
+
         // =====================================================
         //  PALETA DE COLORES 
         // =====================================================
@@ -204,7 +209,7 @@ namespace pryAmayaGimnasio
 
             btnAnterior.Enabled = pestana > 0;
             btnSiguiente.Enabled = puedeAvanzar;
-            lblPaso.Text = "Paso " + (pestana + 1) + " de 3";
+            lblPaso.Text = "Paso " + (pestana + 1) + " de 4";
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
@@ -215,6 +220,12 @@ namespace pryAmayaGimnasio
         private void btnAnterior_Click(object sender, EventArgs e)
         {
             tabInscripcion.SelectedIndex = tabInscripcion.SelectedIndex - 1;
+        }
+
+        // Click del label de paso (el diseñador lo conectó). No necesita acción, pero debe existir el método.
+        private void lblPaso_Click(object sender, EventArgs e)
+        {
+            // Intencionalmente vacío para resolver referencia del diseñador.
         }
 
         // Se ejecuta al cambiar de pestaña (con los botones o haciendo clic en la solapa)
@@ -274,6 +285,7 @@ namespace pryAmayaGimnasio
 
             ActualizarNavegacion();             
         }
+
 
         // =====================================================
         //  ETAPA 8 - Tarjeta: habilitar / deshabilitar las cuotas
@@ -447,6 +459,9 @@ namespace pryAmayaGimnasio
                 }
             }
 
+
+
+
             // 3) Se aplica el descuento o recargo de la forma de pago
             total = importeConDescuento + importeConDescuento * porcAjuste;
 
@@ -467,6 +482,7 @@ namespace pryAmayaGimnasio
             socio.total = total;
             socio.valorCuota = valorCuota;
 
+
             // ----- Mensaje único con todos los datos (concatenados con +) -----
             string mensaje = "Socio: " + socio.nombre + Environment.NewLine
                 + "Edad: " + socio.edad + " años (" + socio.categoria + ")" + Environment.NewLine
@@ -485,8 +501,44 @@ namespace pryAmayaGimnasio
             MessageBox.Show(mensaje, "Detalle de la inscripción",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            // ALMACENAR EL ARRAY - Nueva Etapa
+            if (indiceSocios < arraySocios.Length)
+            {
+                arraySocios[indiceSocios] = socio;
+                indiceSocios++;
+            }
+
             // El formulario vuelve al estado inicial
             EstadoInicial();
         }
+        // Método para recorrer el array y mostrar los datos en el ListBox
+        private void CargarConsulta()
+        {
+            lstConsultar.Items.Clear();
+
+            for (int i = 0; i < indiceSocios; i++)
+            {
+                string linea = "Socio: " + arraySocios[i].nombre +
+                               " | Plan: " + arraySocios[i].plan +
+                               " | Meses: " + arraySocios[i].meses +
+                               " | Total: " + arraySocios[i].total.ToString("C");
+
+                lstConsultar.Items.Add(linea);
+            }
+        }
+
+        private void lstConsultar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            CargarConsulta();
+
+            tabInscripcion.SelectedTab = tpgConsultar;
+        }
+
     }
-}
+    }
+
