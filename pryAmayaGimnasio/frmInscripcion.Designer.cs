@@ -55,12 +55,12 @@
             this.lblAviso = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
+            this.tpgConsultar = new System.Windows.Forms.TabPage();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.lstConsultar = new System.Windows.Forms.ListBox();
             this.btnAnterior = new System.Windows.Forms.Button();
             this.lblPaso = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
-            this.tpgConsultar = new System.Windows.Forms.TabPage();
-            this.lstConsultar = new System.Windows.Forms.ListBox();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.pnlEncabezado.SuspendLayout();
             this.tabInscripcion.SuspendLayout();
             this.tpgDatos.SuspendLayout();
@@ -76,6 +76,7 @@
             this.pnlEncabezado.Controls.Add(this.lblTitulo);
             this.pnlEncabezado.Controls.Add(this.lblSubtitulo);
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlEncabezado.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlEncabezado.Location = new System.Drawing.Point(0, 0);
             this.pnlEncabezado.Name = "pnlEncabezado";
             this.pnlEncabezado.Size = new System.Drawing.Size(440, 64);
@@ -411,6 +412,41 @@
             this.btnCalcular.UseVisualStyleBackColor = false;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
+            // tpgConsultar
+            // 
+            this.tpgConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(41)))), ((int)(((byte)(59)))));
+            this.tpgConsultar.Controls.Add(this.btnConsultar);
+            this.tpgConsultar.Controls.Add(this.lstConsultar);
+            this.tpgConsultar.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.tpgConsultar.Location = new System.Drawing.Point(4, 22);
+            this.tpgConsultar.Name = "tpgConsultar";
+            this.tpgConsultar.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgConsultar.Size = new System.Drawing.Size(408, 272);
+            this.tpgConsultar.TabIndex = 3;
+            this.tpgConsultar.Text = "Consultar";
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(189)))), ((int)(((byte)(248)))));
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
+            this.btnConsultar.Location = new System.Drawing.Point(6, 6);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(114, 44);
+            this.btnConsultar.TabIndex = 1;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // lstConsultar
+            // 
+            this.lstConsultar.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.lstConsultar.FormattingEnabled = true;
+            this.lstConsultar.Location = new System.Drawing.Point(6, 56);
+            this.lstConsultar.Name = "lstConsultar";
+            this.lstConsultar.Size = new System.Drawing.Size(386, 212);
+            this.lstConsultar.TabIndex = 0;
+            this.lstConsultar.SelectedIndexChanged += new System.EventHandler(this.lstConsultar_SelectedIndexChanged);
+            // 
             // btnAnterior
             // 
             this.btnAnterior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
@@ -456,37 +492,6 @@
             this.btnSiguiente.Text = "&Siguiente >";
             this.btnSiguiente.UseVisualStyleBackColor = false;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
-            // 
-            // tpgConsultar
-            // 
-            this.tpgConsultar.Controls.Add(this.btnConsultar);
-            this.tpgConsultar.Controls.Add(this.lstConsultar);
-            this.tpgConsultar.Location = new System.Drawing.Point(4, 22);
-            this.tpgConsultar.Name = "tpgConsultar";
-            this.tpgConsultar.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgConsultar.Size = new System.Drawing.Size(408, 272);
-            this.tpgConsultar.TabIndex = 3;
-            this.tpgConsultar.Text = "Consultar";
-            this.tpgConsultar.UseVisualStyleBackColor = true;
-            // 
-            // lstConsultar
-            // 
-            this.lstConsultar.FormattingEnabled = true;
-            this.lstConsultar.Location = new System.Drawing.Point(6, 56);
-            this.lstConsultar.Name = "lstConsultar";
-            this.lstConsultar.Size = new System.Drawing.Size(386, 212);
-            this.lstConsultar.TabIndex = 0;
-            this.lstConsultar.SelectedIndexChanged += new System.EventHandler(this.lstConsultar_SelectedIndexChanged);
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Location = new System.Drawing.Point(6, 6);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(114, 44);
-            this.btnConsultar.TabIndex = 1;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // frmInscripcion
             // 

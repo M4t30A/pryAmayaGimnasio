@@ -187,10 +187,8 @@ namespace pryAmayaGimnasio
             txtNombre.Focus();
         }
 
-        // =====================================================
         //  NAVEGACIÓN ENTRE PESTAÑAS
         //  Actualiza "Anterior", "Siguiente" 
-        // =====================================================
         private void ActualizarNavegacion()
         {
             int pestana = tabInscripcion.SelectedIndex;    
